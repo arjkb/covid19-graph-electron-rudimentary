@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net/npm/vue/;" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net/npm/vue/ https://www.gstatic.com/charts/loader.js;" /> -->
     <title>COVID-19 Caller!</title>
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <script src="window.js"></script>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <table>
+    <h1>COVID-19 Heatmaps</h1>
+    <!-- <table>
         <tr>
             <td>Node</td>
             <td><script>document.write(process.versions.node)</script></td>
@@ -23,7 +25,10 @@
             <td>Electron</td>
             <td><script>document.write(process.versions.electron)</script></td>
         </tr>
-    </table>
+    </table> -->
+
+    <div id="cal_basic_in"></div>
+    <div id="cal_basic_de"></div>
 
     <pre id="res"></pre>
 
@@ -36,7 +41,7 @@
         </ul>
     </div> -->
 
-    <div id="app">
+    <!-- <div id="app">
         <table v-if="days">
             <tr>
                 <th>Date</th>
@@ -53,7 +58,7 @@
                 <td>{{ day.Active }}</td>
             </tr>
         </table>
-    </div>
+    </div> -->
     
 </body>
 </html>
