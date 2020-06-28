@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net/npm/vue/;" />
+    <title>COVID-19 Caller!</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="window.js"></script>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <table>
+        <tr>
+            <td>Node</td>
+            <td><script>document.write(process.versions.node)</script></td>
+        </tr>
+        <tr>
+            <td>Chrome</td>
+            <td><script>document.write(process.versions.chrome)</script></td>
+        </tr>
+        <tr>
+            <td>Electron</td>
+            <td><script>document.write(process.versions.electron)</script></td>
+        </tr>
+    </table>
+
+    <pre id="res"></pre>
+
+    <!-- <div id="app">
+        {{ days }}
+        <ul>
+            <li v-for="day in days">
+                {{ day.Date }}
+            </li>
+        </ul>
+    </div> -->
+
+    <div id="app">
+        <table v-if="days">
+            <tr>
+                <th>Date</th>
+                <th>Confirmed</th>
+                <th>Deaths</th>
+                <th>Recovered</th>
+                <th>Active</th>
+            </tr>
+            <tr v-for="day in days">
+                <td>{{ day.Date | properDate }}</td>
+                <td>{{ day.Confirmed }}</td>
+                <td>{{ day.Deaths }}</td>
+                <td>{{ day.Recovered }}</td>
+                <td>{{ day.Active }}</td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

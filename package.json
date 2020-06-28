@@ -1,0 +1,16 @@
+{
+  "name": "covid-caller",
+  "version": "0.1.0",
+  "description": "Simple API calling app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Arjun Krishna Babu",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.0.5"
+  },
+  "dependencies": {}
+}
