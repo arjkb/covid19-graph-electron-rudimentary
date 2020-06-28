@@ -15,15 +15,7 @@ app.once('ready', () => {
 
     // window.webContents.openDevTools()
 
-    // window.loadURL(url.format({
-    //     pathname: path.join(__dirname, 'index.html'),
-    //     protocol: 'file:',
-    //     slashes: true,
-    // }))
-
     window.once('ready-to-show', () => {
         window.show()
     })
 })
-
-// app.whenReady().then(createWindow)
